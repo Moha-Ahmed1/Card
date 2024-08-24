@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-transform: capitalize;
+        font-family: Arial, Helvetica, sans-serif;
+        transition: all .2s linear;
+
+    }
+    .containenr{
+        min-height: 100vh;
+        display: flex;
+        width: 100vw;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        background: #f0f0f0;
+    }
+    .card{
+        width: 400px;
+        height: 300px;
+        background: #fff;
+        border-radius: 5px;
+        padding: 20px;
+        padding-top: 80px;
+        margin: 20px;
+        text-align: center;
+        letter-spacing: 1px;
+        box-shadow: 0 3px 5px rgb(0, 0, 0,.3);
+        overflow: hidden;
+        position: relative;
+        z-index: 0;
+
+
+    }
+    .card h3{
+        font-size: 35px;
+        padding: 20px;
+        color: #444;
+
+    }
+
+
+
+    .card p{
+        font-size: 18px;
+        color: #777;
+    }
+    .card button{
+        outline: none;
+        color: #fff;
+        background: #333;
+        height: 35px;
+        width: 140px;
+        margin-top: 20px;
+        font-size: 17px;
+        cursor: pointer;
+        border-radius: 50px;
+
+    }
+
+    .card button :hover{
+        letter-spacing: 2px;
+        opacity: .8px;
+
+    }
+     .card::before{
+        content: "";
+        position: relative;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 50%;
+        background: rgb(160, 160, 160,.1);
+        z-index: 1;
+    }
+       .card::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        background: #e74c3c;
+        z-index: -2;
+        clip-path: circle(20% at 90% 10%);
+       transition: .2s;
+    }
+    .card .Number{
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        font-size: 50px;
+        font-weight: bolder;
+        color: #fff;
+
+    }
+       .card:nth-child(2)::after{
+        background: #3498db;
+       }
+          .card:nth-child(3)::after{
+        background:green;
+       }
+       .card:hover::after{
+        clip-path: circle(100%);
+       }
+    
+</style>
+<body>
+    <div class="containenr">
+<div class="card">
+    <h3>Card 1</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis aliquam placeat amet quos!</p>
+    <a href=""><button>Read More</button></a>
+    <span class="Number">1</span>
+</div>
+
+<div class="card">
+<h3>Card 1</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis aliquam placeat amet quos!</p>
+    <a href=""><button>Read More</button></a>
+    <span class="Number">2</span>
+</div>
+
+<div class="card">
+<h3>Card 1</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis aliquam placeat amet quos!</p>
+    <a href=""><button>Read More</button></a>
+    <span class="Number">3</span>
+</div>
+    </div>
+</body>
+</html>
